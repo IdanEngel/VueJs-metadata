@@ -10,6 +10,7 @@ app.use(express.static(path.join(__dirname, 'node_modules')))
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// http request
 app.post('/',function(req,res){
     urlMetadata(req.body.url).then(
       function (metadata) { // success handler
